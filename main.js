@@ -1,11 +1,18 @@
 canvas=document.getElementById('myCanvas');
 ctx=canvas.getContext("2d");
 
-car_width=190;
-car_height=190;
+car_width=20;
+car_height=50;
 
 car_x=20;
 car_y=10;
+
+car_width=200;
+car_height=200;
+
+car_x=20;
+car_y=10;
+
 
 background_image="racing.jpg";
 car_image="car1.png";
@@ -58,3 +65,46 @@ function upload_background(){
         }
           
   }
+  function up(){
+    if(car_y >=0)
+    {
+        car_y=car_y-10;
+        console.log("when up arrrow is pressed, x="+car_x + "y=" +car_y);
+ 
+        upload_background();
+        upload_car();
+    }
+}
+
+function down(){
+  if(car_y <=500)
+  {
+      car_y=car_y+10;
+      console.log("when down arrrow is pressed, x="+car_x + "y=" +car_y);
+
+      upload_background();
+      upload_car();
+  }
+}
+
+function left(){
+  if(car_x >=0)
+  {
+      car_x=car_x-10;
+      console.log("when left arrrow is pressed, x="+car_x + "y=" +car_y);
+
+      upload_background();
+      upload_car();
+  }
+}
+
+function right(){
+  if(car_x <=700)
+  {
+      car_x=car_x+10;
+      console.log("when right arrrow is pressed, x="+car_x + "y=" +car_y);
+
+      upload_background();
+      upload_car();
+  }
+}
